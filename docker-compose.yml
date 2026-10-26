@@ -1,0 +1,10 @@
+services:
+  web:
+    build: .
+    container_name: aikopo-web
+    ports:
+      - "8088:80"
+    # 개발 중 파일 수정을 바로 반영하려면 아래 주석 해제
+    # volumes:
+    #   - ./site:/usr/share/nginx/html:ro
+    restart: unless-stopped
